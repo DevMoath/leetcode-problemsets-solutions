@@ -13,9 +13,13 @@ const twoSum = (nums, target) => {
     }
 };
 
+/**
+ * @param {number[]} a
+ * @param {number[]} b
+ * @return {boolean}
+ */
 const isEquals = (a, b) => {
-    return Array.isArray(a) && Array.isArray(b) && a.length === b.length &&
-        a.every((val, index) => val === b[index]);
+    return a.length === b.length && a.every((e, i) => e === b[i]);
 };
 
 // Test cases
