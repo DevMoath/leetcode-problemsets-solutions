@@ -34,19 +34,16 @@ const addTwoNumbers = (l1, l2, carry = null) => {
  * @return {boolean}
  */
 const isEquals = (l1, l2) => {
-    let pointerL1 = l1;
-    let pointerL2 = l2;
-    
-    while (pointerL1 || pointerL2) {
-        let value1 = pointerL1 ? pointerL1.val : 0;
-        let value2 = pointerL2 ? pointerL2.val : 0;
+    while (l1 || l2) {
+        let value1 = l1 ? l1.val : null;
+        let value2 = l2 ? l2.val : null;
         
         if (value1 !== value2) {
             return false;
         }
         
-        pointerL1 = pointerL1.next;
-        pointerL2 = pointerL2.next;
+        l1 = l1.next;
+        l2 = l2.next;
     }
     
     return true;
