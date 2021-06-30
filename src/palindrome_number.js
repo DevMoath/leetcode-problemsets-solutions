@@ -6,8 +6,8 @@ const isPalindrome = (x) => {
     if (x < 0) {
         return false;
     }
-    
-    return x == String(x).split("").reverse().join("");
+
+    return x == String(x).split('').reverse().join('');
 };
 
 // Test cases

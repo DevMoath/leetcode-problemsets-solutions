@@ -3,12 +3,12 @@
  * @return {number}
  */
 const reverse = (x) => {
-    let reversed = String(Math.abs(x)).split("").reverse().join("");
-    
+    let reversed = String(Math.abs(x)).split('').reverse().join('');
+
     if (reversed < Math.pow(-2, 31) || reversed > Math.pow(2, 31) - 1) {
         return 0;
     }
-    
+
     return x < 0 ? -reversed : +reversed;
 };
 

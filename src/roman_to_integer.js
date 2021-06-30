@@ -12,26 +12,30 @@ const romanToInt = (s) => {
         D: 500,
         M: 1000,
     };
-    
-    let strings = s.split(""), result = 0, i, number, nextNumber;
-    
+
+    let strings = s.split(''),
+        result = 0,
+        i,
+        number,
+        nextNumber;
+
     for (i = 0; i < strings.length; i++) {
-        number     = romans[strings[i]];
+        number = romans[strings[i]];
         nextNumber = romans[strings[i + 1]];
-        
+
         if (number < nextNumber) {
             result -= number;
         } else {
             result += number;
         }
     }
-    
+
     return result;
 };
 
 // Test cases
-console.log(romanToInt("III") === 3);
-console.log(romanToInt("IV") === 4);
-console.log(romanToInt("IX") === 9);
-console.log(romanToInt("LVIII") === 58);
-console.log(romanToInt("MCMXCIV") === 1994);
+console.log(romanToInt('III') === 3);
+console.log(romanToInt('IV') === 4);
+console.log(romanToInt('IX') === 9);
+console.log(romanToInt('LVIII') === 58);
+console.log(romanToInt('MCMXCIV') === 1994);
